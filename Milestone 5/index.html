@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Shareable Resume Builder</h1>
+    <form id="Resume-Builder">
+       
+        <fieldset>
+            <legend>Your Name</legend>
+            <input type="text" placeholder="Enter your full name" id="name" required>
+            <legend>Personal Information:</legend> 
+            <label for="userName">Userame:</label> 
+            <input type="text" id="userName" placeholder="Enter user name"> 
+            <label for="fatherName">Father Name:</label> 
+            <input type="text" id="fatherName" placeholder="Enter your father's name"> 
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your e-mail" id="email" required> 
+            <label for="contact">Phone number:</label>
+            <input type="number" id="contact" placeholder="Enter your contact number" required>
+            <label for="add">Address:</label> 
+            <input type="address" id="add" placeholder="Enter your recent address" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="fieldOfStudy">Field of study:</label> 
+            <input type="text" placeholder="Enter your field of study" id="fieldOfStudy" required> 
+            <label for="degree">Degree:</label>
+            <input type="text" placeholder="Enter your degree" id="degree" required> 
+        </fieldset>
+        
+
+        
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills</label> 
+            <textarea id="skills" name="skills" placeholder="Enter your skills" rows="4" required></textarea>
+        </fieldset>
+        
+
+        
+        
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Details:</label> 
+            <textarea id="experience" name="experience" placeholder="Enter your experiences" rows="5" required></textarea>
+        </fieldset>
+
+           
+        <fieldset>
+            <legend>Interest</legend>
+            <label for="interest">List:</label> 
+            <textarea id="interest" name="interest" placeholder="Enter your interest" rows="4"></textarea>
+        </fieldset>
+        <button id="btn" type="submit">Generate resume</button>
+    </form>
+    <div id="Dynamic-resume" contenteditable="true">
+
+    </div>
+
+    <br>
+
+    <div id="ShareableLink" style="display: none;">
+        <h2>ShareableLink</h2>
+        <p>Unique link to edit your resume:</p>
+        <a href="#" id="Link" target="_blank"></a>
+        <br>
+        <button id="pdf-download">Download as PDF</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
